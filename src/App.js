@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
+import { Layout, Header, Navigation, Drawer, Content,Footer,FooterSection,FooterLinkList } from "react-mdl";
 import { Link } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
@@ -23,11 +23,14 @@ function App() {
   };
   return (
     <div>
-      <Layout fixedHeader >
+      <Layout fixedHeader>
         <Header
           transparent
           className="header"
-          style={{borderBottom: '1px solid #333', boxShadow: '0 1px 5px rgba(0,0,0,.2)'}}
+          style={{
+            borderBottom: "1px solid #333",
+            boxShadow: "0 1px 5px rgba(0,0,0,.2)"
+          }}
           title={
             <span>
               <strong>
@@ -48,17 +51,9 @@ function App() {
               <FontAwesomeIcon className="nav-ico" icon={faProjectDiagram} />{" "}
               Projects
             </Link>
-            <Link style={navBar} className="nav-bar-item" to="/Contact">
-              <FontAwesomeIcon className="nav-ico" icon={faIdCardAlt} />
-              Contact
-            </Link>
             <Link style={navBar} className="nav-bar-item" to="/AboutMe">
               <FontAwesomeIcon className="nav-ico" icon={faUser} />
               About me
-            </Link>
-            <Link style={navBar} className="nav-bar-item" to="/Resume">
-              <FontAwesomeIcon className="nav-ico" icon={faAward} />
-              Resume
             </Link>
           </Navigation>
         </Header>
@@ -68,23 +63,15 @@ function App() {
               <FontAwesomeIcon className="nav-ico" icon={faProjectDiagram} />{" "}
               Projects
             </Link>
-            <Link style={navBar} className="nav-bar-item" to="/Contact">
-              <FontAwesomeIcon className="nav-ico" icon={faIdCardAlt} />
-              Contact
-            </Link>
             <Link style={navBar} className="nav-bar-item" to="/AboutMe">
               <FontAwesomeIcon className="nav-ico" icon={faUser} />
               About me
             </Link>
-            <Link style={navBar} className="nav-bar-item" to="/Resume">
-              <FontAwesomeIcon className="nav-ico" icon={faAward} />
-              Resume
-            </Link>
           </Navigation>
         </Drawer>
-        <Content>
+        <section>
           <Main />
-        </Content>
+        </section>
       </Layout>
     </div>
   );
